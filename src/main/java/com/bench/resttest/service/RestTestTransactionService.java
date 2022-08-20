@@ -6,20 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
+import java.util.Iterator;
 import java.util.List;
 
 @Service
 public class RestTestTransactionService {
 
     @Autowired
-    private final RestTestTransactionRepository repository;
+    private RestTestTransactionRepository restTestTransactionRepository;
 
-    public RestTestTransactionService(RestTestTransactionRepository repository) {
-        this.repository = repository;
-    }
-
-    public List<RestTestTransaction> listTransactions() {
-        return repository.findAll();
+    public Iterable<RestTestTransaction> listTransactions() {
+        return restTestTransactionRepository.findAll();
     }
 
 }
