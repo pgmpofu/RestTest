@@ -21,6 +21,7 @@ The following tools and technologies were used to develop this application:
 You can either: 
 - Navigate into the folder via the terminal and type `./gradlew bootRun` or
 - Run the `bootRun` Gradle task in your IDE.
+- Use Postman to call http://localhost:8080/transactions/{page}
 
 ## Assumptions and stretch goals
 - In the future the application should be more secure. Each API should check that an authorized user is accessing its data.
