@@ -1,13 +1,11 @@
 package com.bench.resttest.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "rest_test_transaction")
 public class RestTestTransaction {
 
     @Id
