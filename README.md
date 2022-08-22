@@ -26,4 +26,4 @@ You can either:
 - In the future the application should be more secure. Each API should check that an authorized user is accessing its data.
 - In the future the running total API end point should allow the use to specify a range of dates.
 - In the future a page size should be specified everytime the main API /{page} is called in case the total count of transactions for a page size is extremely large.
-- in the future more tests could be added at the Controller level.
+- In the future more tests could be added at the Controller level.
