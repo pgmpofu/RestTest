@@ -18,18 +18,26 @@ public class RestTestTransactionController {
     @GetMapping(value = "/{page}")
     public ResponseEntity listTransactions(@PathVariable final Long page) throws Exception {
         if(page == null) {
-            throw new NullPointerException("Page number cannot be null");
+            throw new NullPointerException("Page number must be informed");
         }
         return ResponseEntity.ok(service.listTransactions(page));
     }
 
     @GetMapping("/totalByDay")
     public ResponseEntity totalByDay(@RequestBody final RestTestTransaction restTestTransaction) {
+        if(restTestTransaction == null) {
+            throw new NullPointerException("Transaction information must be informed");
+        }
+
+        if(restTestTransaction.getDate() == null) {
+            throw new NullPointerException("Date must be informed");
+        }
+
         return ResponseEntity.ok(service.getTotalByDay(restTestTransaction.getDate()));
     }
 
     @GetMapping("/runningTotal")
-    public ResponseEntity runningTotal(@RequestBody final RestTestTransaction request){
-        return ResponseEntity.ok().build();
+    public ResponseEntity runningTotal(){
+        return ResponseEntity.ok(service.getRunningTotal());
     }
 }
