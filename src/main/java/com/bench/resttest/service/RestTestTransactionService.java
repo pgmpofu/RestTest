@@ -46,14 +46,6 @@ public class RestTestTransactionService {
     }
 
     public List<RestTestTransactionRunningTotal> getRunningTotal() {
-        List<RestTestTransactionRunningTotal> restTestTransactions = restTestTransactionRepository.findRunningTotals();
-//        List<RestTestTransactionRunningTotal> totals = new ArrayList<>();
-//
-//        if (!CollectionUtils.isEmpty(restTestTransactions)) {
-//            for (RestTestTransaction transaction : restTestTransactions) {
-//                totals.add(new RestTestTransactionRunningTotal(transaction.getDate(), transaction.getAmount()));
-//            }
-//        }
-        return restTestTransactions;
+        return restTestTransactionRepository.findRunningTotals();
     }
 }
