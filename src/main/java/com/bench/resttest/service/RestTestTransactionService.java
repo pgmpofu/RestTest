@@ -32,7 +32,7 @@ public class RestTestTransactionService {
 
         List<RestTestTransaction> transactionList = new ArrayList<>();
         for(RestTestTransaction transaction : transactions) {
-            transactionList.add(transactions.iterator().next());
+            transactionList.add(transaction);
         }
 
         RestTestTransactionRequest request = new RestTestTransactionRequest();
