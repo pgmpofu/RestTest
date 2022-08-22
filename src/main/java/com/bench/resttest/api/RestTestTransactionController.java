@@ -15,7 +15,7 @@ public class RestTestTransactionController {
 
     @Autowired
     private RestTestTransactionService service;
-    @GetMapping(value = "/{page}")
+    @GetMapping(value = "/{page}", produces = "application/json")
     public ResponseEntity listTransactions(@PathVariable final Long page) throws Exception {
         if(page == null) {
             throw new NullPointerException("Page number must be informed");

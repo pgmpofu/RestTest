@@ -26,6 +26,14 @@ public class RestTestTransaction {
         this.date = date;
     }
 
+    public RestTestTransaction(Long id, String companyName, String ledger, BigDecimal amount, LocalDate date) {
+        this.id = id;
+        this.companyName = companyName;
+        this.ledger = ledger;
+        this.amount = amount;
+        this.date = date;
+    }
+
     public Long getId() {
         return id;
     }
